@@ -11,7 +11,20 @@ nunjucks.configure ("views",{
 })
 server.listen (5000,function(){
     console.log("hello wolrd!!!")
+
     server.get("/", function(req,res){
+        const about = {
+            avatar_url:"",
+            name:"Pedro Edilsonsonson",
+            role:"Programador front e back",
+            description:"um dev que ta devendo",
+            link:[
+                {name:"Github",url:"https://github.com/PedroGTK"},
+                {name:"Instagram",url:"https://intagram.com/pedro-edilson"},
+                {name:"Linkedin",url:"https://linkedin.com/pedrao"}
+            ]
+        }
+
         return res.render ("index")
     })
 
