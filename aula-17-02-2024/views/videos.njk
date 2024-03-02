@@ -6,6 +6,9 @@
     <div class="card" id={{item.id}}>
         <div class="card_imge">
             <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="">
+            {% if item.featured %}
+            <div class="featured">Em Alta !!!</div>
+            {% endif %}
         </div>
         <div class="card_content">{{item.title}}</div>
         <div class="card_info">
@@ -16,6 +19,8 @@
     </div>   
     {% endfor %}
     </section>
+
+
 <div class="modal_overlay">
     <div class="modal">
        <div class="close_modal">

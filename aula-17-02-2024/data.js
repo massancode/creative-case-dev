@@ -9,7 +9,8 @@ module.exports = [
     id:"gwCMl0QOek0",
     title:"ODA GÊNIO!! SPOILER DO FUTURO DE AOKIJI EM ONE PIECE?!",
     duration:"23:20 min",
-    price:"FREE"
+    price:"FREE",
+    featured:true
 },
     {
     id:"qqNNa5jFqjE",
@@ -27,6 +28,7 @@ module.exports = [
     id:"uIacb0qza5A",
     title:"Como derrotar o atividade paranormal no japião",
     duration:"18:20 min",
-    price:"FREE"
+    price:"FREE",
+    featured:true
 },
 ]
