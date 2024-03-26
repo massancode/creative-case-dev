@@ -77,4 +77,9 @@ header{
     width: 800px;
     margin: 45px auto;
     border-radius: 16px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 2px 2px 40px 18px var(--corlegal);
 }
