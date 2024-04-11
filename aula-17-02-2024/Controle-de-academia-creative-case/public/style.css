@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    color: white;
+    
     
 }
 :root{
@@ -18,9 +18,12 @@ header{
     padding: 30px;
     border-bottom: 3px solid var(--corlegal) ;
     background-color: rgba(0, 0, 0, 0.5);
+   
 }
 .links {
     text-align: center;
+    animation-name: up;
+    animation-duration: 1500ms;
 }
 .links a {
     color: white;
@@ -73,13 +76,43 @@ header{
 
 .card{
     background-color: white;
-    height: 400px;
+    min-height: 400px;
     width: 800px;
     margin: 45px auto;
     border-radius: 16px;
+    color: black;
+    
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     box-shadow: 2px 2px 40px 18px var(--corlegal);
+    animation-name: up;
+    animation-duration: 1500ms;
+  
+}
+.details{
+    padding: 32px;
+    color: black;
+}
+
+.details .item {
+    border-bottom: 2px solid black;
+    padding: 16px 0;
+}
+
+
+
+
+
+
+@keyframes up {
+  from{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to{
+     opacity: 1;
+    
+  }
 }
