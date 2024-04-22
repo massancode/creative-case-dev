@@ -10,4 +10,12 @@
         return res.render ("instructors/index")
     })
 
+    routes.get ('/create',function(req,res){
+        return res.render ("instructors/create")
+    })
+
+    routes.post ("/instructors",function(req,res){
+        return res.send ("RECEBIDO")
+    })
+
     module.exports = routes
