@@ -138,13 +138,39 @@ header{
     font-size: 16px;
     color: white;
     letter-spacing: 1px;
-     
-
-   
-
-
 }
 
+
+/* === FORMS === */
+   input{
+    width: 100%;
+    outline: none;
+    font-weight:bold;
+    font-size: 18px;
+   }
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+   }
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+button[type="submit"]{
+    padding: 8px 32px;
+    width: 100%;
+    background-color: var(--corlegal);
+    color: white;
+    border-radius: 4px;
+    margin-top:32px;
+    font-size: 18px;
+}
+button:hover[type="submit"]{  
+    background-color: rgb(36, 109, 69);
+    color: white;
+    cursor: pointer;
+}
 
 @keyframes up {
   from{
