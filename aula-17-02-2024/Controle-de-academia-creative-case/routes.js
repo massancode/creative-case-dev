@@ -1,5 +1,6 @@
     const express = require ('express')
     const routes = express.Router()
+    const instructors = require ("./intructors")
 
 
     routes.get ('/',function(req,res){
@@ -14,14 +15,6 @@
         return res.render ("instructors/create")
     })
 
-    routes.post ("/instructors",function(req,res){
-       
-     const keys = Object.keys (req.body)
-      for(key of keys){
-        if(req.body[key]==""){
-            return res.send ("preencha o form")
-        }
-      }
-    })
+    routes.post ("/instructors",instructors.post)
 
     module.exports = routes
