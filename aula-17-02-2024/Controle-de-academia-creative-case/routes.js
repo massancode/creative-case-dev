@@ -15,6 +15,8 @@
         return res.render ("instructors/create")
     })
 
+    routes.get("/:id",instructors.show)
+
     routes.post ("/instructors",instructors.post)
 
     module.exports = routes

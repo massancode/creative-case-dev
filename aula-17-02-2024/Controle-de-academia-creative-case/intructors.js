@@ -27,5 +27,38 @@ exports.post = function(req,res){
    }
 
 
+   exports.show = function (req,res){
+    const {id} = req.params 
+
+    const foundInstructor = data.instructors.find (function(instructor){
+        return instructor.id == id
+    })
+
+    if(!foundInstructor) return res.send ("Instrutor não encontrado")
+
+        function age (timestamp){
+
+            const today = new Date() 
+            const birthday = new Date (timestamp)
+        
+            let age = today.getFullYear() - birthday.getFullYear()
+            const month = today.getMonth - birthday.getMonth()
+            if(month < 0 || month == 0 && today.getDate() <= birthday.getDate()) {
+        
+                age = age -1
+            }
+            return age
+        }
+        
+        const instructor = {
+            ...foundInstructor,
+            birth: age (foundInstructor.birth),
+            gender:"M",
+            created_at:""
+        }
+
+        return res.render("instructors/show",{instructor})
+   }
+
 
    
