@@ -52,9 +52,8 @@ exports.post = function(req,res){
         
         const instructor = {
             ...foundInstructor,
-            birth: age (foundInstructor.birth),
-            gender:"M",
-            created_at:""
+            birth: age (foundInstructor.birth)+ " anos",
+            created_at: age(foundInstructor.created_at)
         }
 
         return res.render("instructors/show",{instructor})

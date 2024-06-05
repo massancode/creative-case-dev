@@ -1,84 +1,13 @@
 {
   "instructors": [
     {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457885553,
-      "id": 1
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457892802,
-      "id": 2
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457893414,
-      "id": 3
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457893724,
-      "id": 4
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457894056,
-      "id": 5
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457894350,
-      "id": 6
-    },
-    {
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715457894665,
-      "id": 7
-    },
-    {
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715458886006,
-      "id": 8
-    },
-    {
-      "id": 9,
-      "name": "joao pero",
-      "avatar_url": "https://link.com",
-      "birth": 865036800000,
-      "gender": "M",
-      "services": "crossfit,muslation",
-      "created_at": 1715458943681
+      "id": 1,
+      "name": "Fernando Lucas de Castro cavalcante",
+      "avatar_url": "https://media.licdn.com/dms/image/D4D03AQHxrfI0G1vgNA/profile-displayphoto-shrink_200_200/0/1710799207419?e=2147483647&v=beta&t=jLw_2DwQy3TW5Usz9c5AD6omUEuZdoOqx2ADAbd2wcI",
+      "birth": 857433600000,
+      "gender": "Maculino",
+      "services": "Crossfit,musculaçao,natação",
+      "created_at": 1717600520256
     }
   ]
 }
