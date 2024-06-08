@@ -15,7 +15,12 @@
         return res.render ("instructors/create")
     })
 
+
     routes.get("/:id",instructors.show)
+
+     routes.get("/instructors/:id/edit",function(req,res){
+        return res.render ("instructors/edit")
+     })
 
     routes.post ("/instructors",instructors.post)
 
