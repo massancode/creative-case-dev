@@ -1,6 +1,7 @@
 // Funções da pagina de instrutores
 const fs = require ("fs")
 const data = require ("./data.json")
+const {age} = require ("./utils")
 
 
 exports.post = function(req,res){
@@ -36,24 +37,12 @@ exports.post = function(req,res){
 
     if(!foundInstructor) return res.send ("Instrutor não encontrado")
 
-        function age (timestamp){
-
-            const today = new Date() 
-            const birthday = new Date (timestamp)
-        
-            let age = today.getFullYear() - birthday.getFullYear()
-            const month = today.getMonth - birthday.getMonth()
-            if(month < 0 || month == 0 && today.getDate() <= birthday.getDate()) {
-        
-                age = age -1
-            }
-            return age
-        }
+ 
         
         const instructor = {
             ...foundInstructor,
             birth: age (foundInstructor.birth)+ " anos",
-            created_at: age(foundInstructor.created_at)
+            created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at)
         }
 
         return res.render("instructors/show",{instructor})
