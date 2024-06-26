@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
     age: function (timestamp){
         const today = new Date() 
             const birthday = new Date (timestamp)
@@ -11,4 +11,5 @@ module.exports ={
             }
             return age
     }
-}
+} 
+ 
