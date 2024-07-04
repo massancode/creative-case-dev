@@ -48,6 +48,7 @@ exports.post = function(req,res){
         }
 
         return res.render("instructors/show",{instructor})
+
    }
 
 

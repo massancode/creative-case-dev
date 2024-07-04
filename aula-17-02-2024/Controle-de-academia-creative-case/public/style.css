@@ -171,8 +171,6 @@ button:hover[type="submit"]{
     color: white;
     cursor: pointer;
 }
-
-
 a.button{ display: block; box-sizing: border-box; text-align: center; text-decoration: none;}
 
 @keyframes up {
