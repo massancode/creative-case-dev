@@ -1,4 +1,5 @@
-function age (timestamp){
+module.exports ={
+    age: function (timestamp){
     const today = new Date() // controla a data de hoje
     const birthday = new Date (timestamp) // aniversario em segundos
 
@@ -11,7 +12,7 @@ function age (timestamp){
 
     return age
 
+  }
 }
 
 
-console.log (age(872899200000))

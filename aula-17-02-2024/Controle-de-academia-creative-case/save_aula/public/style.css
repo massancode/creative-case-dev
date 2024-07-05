@@ -157,7 +157,7 @@ input::placeholder{
     font-size: 16px;
     font-weight: normal;
 }
-button[type="submit"]{
+button[type="submit"],a.button{
     padding: 8px 32px;
     width: 100%;
     background-color: var(--corlegal);
@@ -170,6 +170,12 @@ button:hover[type="submit"]{
     background-color: rgb(36, 109, 69);
     color: white;
     cursor: pointer;
+}
+a.button{
+    display: block; 
+    box-sizing: border-box; 
+    text-align: center;
+    text-decoration: none;
 }
 
 @keyframes up {
