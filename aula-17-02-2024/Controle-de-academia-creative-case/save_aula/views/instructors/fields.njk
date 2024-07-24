@@ -1,6 +1,6 @@
  <div class ="item" >
               <div> DIGITE SEU NOME</div>
-              <input type="text" name="name" placeholder="Nome Completo"  value='{{instructor.name}}'>
+              <input type="text" name="name" placeholder="Nome Completo"  value= '{{instructor.name}}' >
         </div>  
         <div class ="item" >
               <div> SUA FOTO</div>
@@ -15,11 +15,11 @@
         <div class ="item">
               <div> Qual sua sexualidade ?</div>
               <div> 
-                  <span><input type="radio" name="gender" value= "Masculino" checked>  MASCULINO</span>
-                  <span><input type="radio" name="gender" value= "Femenino" >  FEMININO</span>
-                  <span><input type="radio" name="gender" value= "Outros" >  OUTROS</span>
-                  <span><input type="radio" name="gender" value= "Transgênero" >  TRANSGÊNERO</span>
-                  <span><input type="radio" name="gender" value= "Não Binário" >  NÂO BINÁRIO</span>
+                  <span><input type="radio" name="gender" value= "Masculino" {% if instructor.gender == 'Masculino' %}  checked {% endif %}}   >  MASCULINO</span>
+                  <span><input type="radio" name="gender" value= "Femenino" {% if instructor.gender == 'Femenino' %}  checked {% endif %}}>  FEMININO</span>
+                  <span><input type="radio" name="gender" value= "Outros" {% if instructor.gender == 'Outros' %}  checked {% endif %}}>  OUTROS</span>
+                  <span><input type="radio" name="gender" value= "Transgênero" {% if instructor.gender == 'Transgênero' %}  checked {% endif %}}>  TRANSGÊNERO</span>
+                  <span><input type="radio" name="gender" value= "Não Binário" {% if instructor.gender == 'Não Binário' %}  checked {% endif %}}>  NÂO BINÁRIO</span>
               </div>
         </div>  
         <div class ="item">
@@ -28,3 +28,6 @@
                <input type="text" name="services" placeholder="separe por virgula" value='{{instructor.services}}'>
               </div>
         </div>  
+
+
+       

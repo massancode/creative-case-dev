@@ -1,7 +1,8 @@
 // Funções da pagina de instrutores
 const fs = require ("fs")
 const data = require ("./data.json")
-const {age} = require ('./utils')
+const {age,date} = require ('./utils')
+const { name } = require("browser-sync")
 
 
 exports.post = function(req,res){
@@ -27,7 +28,7 @@ exports.post = function(req,res){
        })
    }
 
-   exports.show = function (req,res){
+exports.show = function (req,res){
     const {id} = req.params
 
     const foundInstructor = data.instructors.find (function(instructor){
@@ -44,8 +45,7 @@ exports.post = function(req,res){
 
         return res.render ("instructors/show",{instructor})
    }
-
-   exports.editNow = function (req,res){
+/*exports.edit = function (req,res){
     const {id} = req.params
 
     const foundInstructor = data.instructors.find (function(instructor){
@@ -54,7 +54,32 @@ exports.post = function(req,res){
 
     if(!foundInstructor) return res.send ("instrutor não encontrado")
 
-        return res.render ("instructors/edit",{instructor:foundInstructor})
+       const instructor= {
+        ...foundInstructor,
+        birth: age(foundInstructor.birth) + "anos",
+        created_at: new Intl.DateTimeFormat("pt-br").format(foundInstructor.created_at)
+       }
+
+        return res.render ("instructors/edit",{instructor})
+   }*/
+
+exports.editNow = function (req,res){
+    const {id} = req.params
+
+    const foundInstructor = data.instructors.find (function(instructor){
+        return instructor.id == id
+    })
+
+    if(!foundInstructor) {
+    return res.send ("instrutor não encontrado")}
+
+      const instructor ={
+        ...foundInstructor,
+        birth: date (foundInstructor.birth)
+        
+      }
+      date(foundInstructor.birth)
+      return res.render ("instructors/edit",{instructor})
    }
 
 
