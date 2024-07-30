@@ -5,6 +5,30 @@ const {age,date} = require ('./utils')
 const { name } = require("browser-sync")
 
 
+exports.put = function (req,res){
+    const {id} = req.body
+    let index = 0
+
+ const foundInstructor = data.instructors.find (function(instructor,foundInstructor){
+    if (id == instructor.id){
+        index = foundInstructor}
+    })
+    const instructor = {
+        ...foundInstructor,
+        ...req.body,
+        birth:Date.parse(req.body.birth)
+    }
+
+    data.instructors[index] = instructor
+
+    fs.writeFile ("data.json",JSON.stringify(data,null,2),function(err){
+        if (err) return res.send ('erro ao gravar!')
+        return res.redirect (`/instructors/${$id}`)    
+    })
+ }
+
+    
+
 exports.post = function(req,res){
        
     const keys = Object.keys (req.body)

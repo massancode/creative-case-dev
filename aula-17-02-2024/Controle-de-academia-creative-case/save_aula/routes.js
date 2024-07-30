@@ -26,4 +26,6 @@
 
     routes.post ("/instructors",instructors.post)
 
+    routes.put("/instructors",instructors.put)
+
     module.exports = routes
