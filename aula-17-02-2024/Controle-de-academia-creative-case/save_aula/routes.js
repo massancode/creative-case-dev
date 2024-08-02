@@ -28,4 +28,6 @@
 
     routes.put("/instructors",instructors.put)
 
+    routes.delete("/instructors",instructors.delete)
+
     module.exports = routes

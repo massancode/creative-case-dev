@@ -9,9 +9,9 @@ exports.put = function (req,res){
     const {id} = req.body
     let index = 0
 
- const foundInstructor = data.instructors.find (function(instructor,foundInstructor){
+ const foundInstructor = data.instructors.find (function(instructor,foundIndex){
     if (id == instructor.id){
-        index = foundInstructor}
+        index = foundIndex}
     })
     const instructor = {
         ...foundInstructor,
@@ -23,7 +23,8 @@ exports.put = function (req,res){
 
     fs.writeFile ("data.json",JSON.stringify(data,null,2),function(err){
         if (err) return res.send ('erro ao gravar!')
-        return res.redirect (`/instructors/${$id}`)    
+            
+        return res.redirect (`/instructors/${id}`)    
     })
  }
 

@@ -178,6 +178,16 @@ a.button{
     text-decoration: none;
 }
 
+#form-delete button{
+    background-color: #b70b0b;
+    cursor: pointer;
+}
+
+#form-delete button:hover{
+    background-color: #280c0c;
+    cursor: pointer;
+}
+
 @keyframes up {
   from{
     opacity: 0;
